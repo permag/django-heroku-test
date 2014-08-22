@@ -1,0 +1,17 @@
+{% extends 'shared/base.html' %}
+{% block title %}{{block.super}} | Home{% endblock %}
+
+{% block content %}
+	<h1>List of polls</h1>
+
+	{% if polls %}
+		<ul>
+		{% for poll in polls %}
+			<li>{{ poll.title }}: {{ poll.description }}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+
+	<a href="{% url 'index' %}">Go back</a>
+	
+{% endblock content%}

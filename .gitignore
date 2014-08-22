@@ -1,0 +1,4 @@
+myproject/settings/dev.py
+venv
+*.pyc
+*.sql
