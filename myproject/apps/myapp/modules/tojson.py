@@ -1,8 +1,8 @@
-from django.utils import simplejson
+import json
 from django.core import serializers
 
 def polls(polls):
-    data = simplejson.dumps([{
+    data = json.dumps([{
         'id': p.id,
         'title': p.title,
         'description': p.description} for p in polls])

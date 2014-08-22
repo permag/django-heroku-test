@@ -12,4 +12,4 @@ def polls(request, extension=None):
     if not extension:  # extension json|xml
         return render(request, 'polls.html', {'polls': polls})
     elif extension == 'json':
-        return HttpResponse(tojson.polls(polls), mimetype='application/json')
+        return HttpResponse(tojson.polls(polls), content_type='application/json')
