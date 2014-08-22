@@ -10,6 +10,9 @@
 			<li>{{ poll.title }}: {{ poll.description }}</li>
 		{% endfor %}
 		</ul>
+		<p>
+			<a href="{% url 'polls' 'json' %}">JSON output</a>	
+		</p>
 	{% endif %}
 
 	<a href="{% url 'index' %}">Go back</a>
