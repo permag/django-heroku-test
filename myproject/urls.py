@@ -13,4 +13,5 @@ urlpatterns = patterns('',
 
     url(r'^$', views.index, name='index'),
     url(r'^polls/', views.polls, name='polls'),
+    url(r'^polls\.(?P<extension>(json)|(xml))$', views.polls, name='polls'),
 )
