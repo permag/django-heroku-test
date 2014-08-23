@@ -2,3 +2,5 @@ myproject/settings/dev.py
 venv
 *.pyc
 *.sql
+.DS_Store
+
