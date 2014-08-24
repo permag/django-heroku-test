@@ -1,6 +1,4 @@
 """
-Django settings for myproject project.
-
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
 

@@ -1,9 +1,6 @@
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
 
-# dev
-# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # prod
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +11,7 @@ DEBUG = True
 
 
 # prod
-ALLOWED_HOSTS = ['herodjang222.herokuapp.com']
+ALLOWED_HOSTS = ['djangohero.herokuapp.com/']
 
 
 # prod
@@ -27,7 +24,6 @@ DATABASES = {
 
 
 # prod
-import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 
 
