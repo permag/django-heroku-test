@@ -9,12 +9,11 @@ import os
 import dj_database_url
 
 
-project_path = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = project_path[:-9] # chop off "settings/"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))[:-9] # chop off "settings/"
 
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['djangohero.herokuapp.com']
 
