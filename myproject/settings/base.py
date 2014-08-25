@@ -12,10 +12,6 @@ prod or dev environment then set using DJANGO_SETTINGS_MODULE
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'kq@1og#)lymvz^yxem1dgdxvf+kr19kkt8+3qcqsii(2vj8%+9'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-
-TEMPLATE_DEBUG = True
-
 
 # Application definition
 
