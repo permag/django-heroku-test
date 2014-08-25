@@ -1,17 +1,13 @@
 """
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
+Base settings
+prod or dev environment then set using DJANGO_SETTINGS_MODULE
 
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# from prod import *
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'kq@1og#)lymvz^yxem1dgdxvf+kr19kkt8+3qcqsii(2vj8%+9'
@@ -65,13 +61,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-# Override prod settings with dev settings
-# if module can be loaded = local system
-# if not, = version control and production
-
-# try:
-#     from dev import *
-# except ImportError as e:
-#     pass

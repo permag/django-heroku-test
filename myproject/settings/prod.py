@@ -1,21 +1,23 @@
-from defaults import *
+"""
+PROD settings
+Prod environment is set using DJANGO_SETTINGS_MODULE
+
+"""
+
+from base import *
 import os
 import dj_database_url
 
 
-# prod
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+DEBUG = False
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-
-# prod
 ALLOWED_HOSTS = ['djangohero.herokuapp.com/']
 
 
-# prod
+# Database
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -23,12 +25,9 @@ DATABASES = {
     }
 }
 
-
-# prod
 DATABASES['default'] = dj_database_url.config()
 
 
-# prod
 STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
