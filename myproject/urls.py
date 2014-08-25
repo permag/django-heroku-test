@@ -15,3 +15,12 @@ urlpatterns = patterns('',
     url(r'^polls/', views.polls, name='polls'),
     url(r'^polls\.(?P<extension>(json)|(xml))$', views.polls, name='polls'),
 )
+
+import settings
+from settings.prod import DEBUG
+
+if DEBUG is False:   # if DEBUG is True it will be served automatically
+    urlpatterns += patterns('',
+            url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.prod.STATIC_ROOT}),
+    )
+print "UUEUEUEUEUEUEUEU"
