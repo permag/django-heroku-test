@@ -7,7 +7,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from prod import *
+# from prod import *
 
 
 # Quick-start development settings - unsuitable for production
@@ -71,7 +71,7 @@ STATIC_URL = '/static/'
 # if module can be loaded = local system
 # if not, = version control and production
 
-try:
-    from dev import *
-except ImportError as e:
-    pass
+# try:
+#     from dev import *
+# except ImportError as e:
+#     pass
