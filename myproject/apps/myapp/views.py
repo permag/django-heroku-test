@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404, get_list_or_404
 from myproject.apps.myapp.models import Poll
 from myproject.apps.myapp.modules import tojson
 
@@ -7,7 +7,7 @@ def index(request):
 
 
 def polls(request, extension=None):
-    polls = Poll.objects.all()
+    polls = get_list_or_404(Poll.objects.all().order_by('-id'))
     
     if not extension:  # extension json|xml
         return render(request, 'polls.html', {'polls': polls})
