@@ -29,5 +29,3 @@ DATABASES = {
         'HOST': '',
     }
 }
-
-print BASE_DIR
