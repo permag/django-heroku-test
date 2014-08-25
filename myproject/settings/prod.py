@@ -9,7 +9,8 @@ import os
 import dj_database_url
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+project_path = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = project_path[:-9] # chop off "settings/"
 
 DEBUG = False
 
@@ -33,7 +34,7 @@ DATABASES['default'] = dj_database_url.config()
 STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '../myapp/static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 
